@@ -6,7 +6,9 @@ import { VehiculosListaComponent } from './vehiculos-lista/vehiculos-lista.compo
   declarations: [
     VehiculosListaComponent
   ],
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   exports: [
     VehiculosListaComponent
   ]
