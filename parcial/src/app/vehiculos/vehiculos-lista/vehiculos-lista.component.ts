@@ -1,5 +1,5 @@
-import { VehiculosService } from './../vehiculos.service';
-import { Vehiculo } from './../vehiculo';
+import { VehiculosService } from '../vehiculos.service';
+import { Vehiculo } from '../vehiculo';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class VehiculosListaComponent implements OnInit {
 
   vehiculos: Vehiculo[] = []
-  marcas = new Map()
 
   constructor(private vehiculosService: VehiculosService) { }
 
