@@ -1,7 +1,5 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VehiculosListaComponent } from './vehiculos-lista.component';
 
@@ -9,14 +7,13 @@ describe('VehiculosListaComponent', () => {
   let component: VehiculosListaComponent;
   let fixture: ComponentFixture<VehiculosListaComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ VehiculosListaComponent ]
     })
     .compileComponents();
-  }));
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(VehiculosListaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

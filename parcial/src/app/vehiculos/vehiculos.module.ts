@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { VehiculosListaComponent } from './vehiculos-lista/vehiculos-lista.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  exports: [
+  declarations: [
     VehiculosListaComponent
   ],
-  declarations: [VehiculosListaComponent]
+  imports: [],
+  exports: [
+    VehiculosListaComponent
+  ]
 })
 export class VehiculosModule { }

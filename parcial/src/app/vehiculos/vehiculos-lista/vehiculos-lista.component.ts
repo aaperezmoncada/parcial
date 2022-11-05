@@ -1,5 +1,5 @@
-import { VehiculosService } from '../vehiculos.service';
-import { Vehiculo } from '../vehiculo';
+import { VehiculosService } from './../vehiculos.service';
+import { Vehiculo } from './../vehiculo';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -31,6 +31,7 @@ export class VehiculosListaComponent implements OnInit {
       this.marcas.set(element.marca, total)
     });
   }
+
 
   ngOnInit(): void {
     this.getVehiculos()
