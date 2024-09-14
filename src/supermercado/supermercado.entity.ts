@@ -31,5 +31,4 @@ export class SupermercadoEntity {
   @JoinTable()
   ciudades: CiudadEntity[];
 
-
 }
