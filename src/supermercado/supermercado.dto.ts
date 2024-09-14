@@ -1,7 +1,7 @@
 /* Global imports */
 import {IsNotEmpty, IsOptional, IsString, MinLength} from 'class-validator';
 /** DTO for ciudad entitie */
-export class CiudadDto {
+export class SupermercadoDto {
   @IsString()
   @IsNotEmpty()
   @MinLength(1)
