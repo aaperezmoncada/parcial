@@ -9,7 +9,7 @@ import {BusinessErrorsInterceptor} from '../shared';
 
 
 /** Ciudad controller logic */
-@Controller('ciudad')
+@Controller('cities')
 @UseInterceptors(BusinessErrorsInterceptor)
 export class CiudadController {
   constructor(private readonly ciudadService: CiudadService) {}

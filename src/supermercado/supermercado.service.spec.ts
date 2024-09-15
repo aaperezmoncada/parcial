@@ -49,12 +49,12 @@ describe('SupermercadoService', () => {
 
   it('findOne should return a Supermercado by id', async () => {
     const storedSupermercado: SupermercadoEntity = supermercadosList[0];
-    const Supermercado: SupermercadoEntity = await service.findOne(storedSupermercado.id);
-    expect(Supermercado).not.toBeNull();
-    expect(Supermercado.nombre).toEqual(storedSupermercado.nombre);
-    expect(Supermercado.latitud).toEqual(storedSupermercado.latitud);
-    expect(Supermercado.longitud).toEqual(storedSupermercado.longitud);
-    expect(Supermercado.paginaWeb).toEqual(storedSupermercado.paginaWeb);
+    const supermercado: SupermercadoEntity = await service.findOne(storedSupermercado.id);
+    expect(supermercado).not.toBeNull();
+    expect(supermercado.nombre).toEqual(storedSupermercado.nombre);
+    expect(supermercado.latitud).toEqual(storedSupermercado.latitud);
+    expect(supermercado.longitud).toEqual(storedSupermercado.longitud);
+    expect(supermercado.paginaWeb).toEqual(storedSupermercado.paginaWeb);
   });
 
   it('findOne should throw an exception for an invalid supermercado', async () => {

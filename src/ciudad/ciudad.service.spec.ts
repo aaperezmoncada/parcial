@@ -18,11 +18,11 @@ describe('CiudadService', () => {
     ciudadesList = [];
     for (let i = 0; i < 5; i++) {
       const ciudad: CiudadEntity = await repository.save({
-        nombre: faker.lorem.word(),
-        pais: faker.lorem.word(),
+        nombre: faker.location.city(),
+        pais: faker.location.country(),
         habitantes: faker.number.int()
       });
-      ciudadesList.push(ciudad);
+        ciudadesList.push(ciudad);
     }
   };
 

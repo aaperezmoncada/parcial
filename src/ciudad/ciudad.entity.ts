@@ -1,5 +1,5 @@
 /* Global imports */
-import {Column, Entity, ManyToMany, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {SupermercadoEntity} from "../supermercado/supermercado.entity";
 
 /* Entities imports */
@@ -22,6 +22,7 @@ export class CiudadEntity {
 
   /** Supermercados [SupermercadoEntity] that belong to this ciudad, This is a ManyToMany association */
   @ManyToMany(() => SupermercadoEntity, (supermercado: SupermercadoEntity) => supermercado.ciudades)
+  @JoinTable()
   supermercados: SupermercadoEntity[];
 
 }

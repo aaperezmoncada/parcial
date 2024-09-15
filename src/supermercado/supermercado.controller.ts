@@ -9,13 +9,13 @@ import {BusinessErrorsInterceptor} from '../shared';
 
 
 /** Supermercado controller logic */
-@Controller('supermercado')
+@Controller('supermarkets')
 @UseInterceptors(BusinessErrorsInterceptor)
 export class SupermercadoController {
   constructor(private readonly supermercadoService: SupermercadoService) {}
 
   /**
-   * Get all the supermercados GET /api/v1/supermercado
+   * Get all the supermercados GET /api/v1/supermarkets
    * @returns {Promise<SupermercadoEntity[]>} supermercados array
    */
   @Get()
@@ -24,7 +24,7 @@ export class SupermercadoController {
   }
 
   /**
-   * Create a supermercado endpoint GET /api/v1/supermercado/:supermercadoId
+   * Create a supermercado endpoint GET /api/v1/supermarkets/:supermercadoId
    * @param {string} supermercadoId supermercado Identity
    * @returns {Promise<SupermercadoEntity>} Found supermercado
    */
@@ -34,7 +34,7 @@ export class SupermercadoController {
   }
 
   /**
-   * Create a supermercado endpoint POST /api/v1/supermercado
+   * Create a supermercado endpoint POST /api/v1/supermarkets
    * @param {SupermercadoDto} supermercadoDto supermercado DTO
    * @returns {Promise<SupermercadoEntity>} supermercado already created
    */
@@ -46,7 +46,7 @@ export class SupermercadoController {
   }
 
   /**
-   * Update a supermercado endpoint PUT /api/v1/supermercado/:supermercadoId
+   * Update a supermercado endpoint PUT /api/v1/supermarkets/:supermercadoId
    * @param {string} supermercadoId supermercado Identity
    * @param {SupermercadoUpdateDto} supermercadoDto supermercado DTO
    * @returns {Promise<SupermercadoEntity>} supermercado already updated
@@ -58,7 +58,7 @@ export class SupermercadoController {
   }
 
   /**
-   * Delete a supermercado endpoint DELETE /api/v1/supermercado/:supermercadoId
+   * Delete a supermercado endpoint DELETE /api/v1/supermarkets/:supermercadoId
    * @param {string} supermercadoId supermercado Identity
    */
   @Delete(':supermercadoId')
